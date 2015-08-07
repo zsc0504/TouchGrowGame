@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18C25A661B7360FA004D7B4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C25A651B7360FA004D7B4B /* main.m */; };
+		18C25A691B7360FA004D7B4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C25A681B7360FA004D7B4B /* AppDelegate.m */; };
+		18C25A6C1B7360FA004D7B4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C25A6B1B7360FA004D7B4B /* ViewController.m */; };
+		18C25A6F1B7360FA004D7B4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C25A6D1B7360FA004D7B4B /* Main.storyboard */; };
+		18C25A711B7360FA004D7B4B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C25A701B7360FA004D7B4B /* Images.xcassets */; };
+		18C25A741B7360FA004D7B4B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C25A721B7360FA004D7B4B /* LaunchScreen.xib */; };
+		18C25A801B7360FA004D7B4B /* TouchGrowGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C25A7F1B7360FA004D7B4B /* TouchGrowGameTests.m */; };
+		18C25A8B1B7361F9004D7B4B /* TouchGrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C25A8A1B7361F9004D7B4B /* TouchGrowView.m */; };
+		18C25A8E1B736449004D7B4B /* RandomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C25A8D1B736449004D7B4B /* RandomView.m */; };
+		18C25A911B73647D004D7B4B /* RunningManView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C25A901B73647D004D7B4B /* RunningManView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18C25A7A1B7360FA004D7B4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18C25A581B7360FA004D7B4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18C25A5F1B7360FA004D7B4B;
+			remoteInfo = TouchGrowGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18C25A601B7360FA004D7B4B /* TouchGrowGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchGrowGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C25A641B7360FA004D7B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C25A651B7360FA004D7B4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18C25A671B7360FA004D7B4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18C25A681B7360FA004D7B4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18C25A6A1B7360FA004D7B4B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18C25A6B1B7360FA004D7B4B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18C25A6E1B7360FA004D7B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18C25A701B7360FA004D7B4B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		18C25A731B7360FA004D7B4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		18C25A791B7360FA004D7B4B /* TouchGrowGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchGrowGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C25A7E1B7360FA004D7B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C25A7F1B7360FA004D7B4B /* TouchGrowGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchGrowGameTests.m; sourceTree = "<group>"; };
+		18C25A891B7361F9004D7B4B /* TouchGrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGrowView.h; sourceTree = "<group>"; };
+		18C25A8A1B7361F9004D7B4B /* TouchGrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGrowView.m; sourceTree = "<group>"; };
+		18C25A8C1B736449004D7B4B /* RandomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomView.h; sourceTree = "<group>"; };
+		18C25A8D1B736449004D7B4B /* RandomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomView.m; sourceTree = "<group>"; };
+		18C25A8F1B73647D004D7B4B /* RunningManView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunningManView.h; sourceTree = "<group>"; };
+		18C25A901B73647D004D7B4B /* RunningManView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunningManView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18C25A5D1B7360FA004D7B4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18C25A761B7360FA004D7B4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18C25A571B7360FA004D7B4B = {
+			isa = PBXGroup;
+			children = (
+				18C25A621B7360FA004D7B4B /* TouchGrowGame */,
+				18C25A7C1B7360FA004D7B4B /* TouchGrowGameTests */,
+				18C25A611B7360FA004D7B4B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18C25A611B7360FA004D7B4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18C25A601B7360FA004D7B4B /* TouchGrowGame.app */,
+				18C25A791B7360FA004D7B4B /* TouchGrowGameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18C25A621B7360FA004D7B4B /* TouchGrowGame */ = {
+			isa = PBXGroup;
+			children = (
+				18C25A671B7360FA004D7B4B /* AppDelegate.h */,
+				18C25A681B7360FA004D7B4B /* AppDelegate.m */,
+				18C25A6A1B7360FA004D7B4B /* ViewController.h */,
+				18C25A6B1B7360FA004D7B4B /* ViewController.m */,
+				18C25A6D1B7360FA004D7B4B /* Main.storyboard */,
+				18C25A701B7360FA004D7B4B /* Images.xcassets */,
+				18C25A721B7360FA004D7B4B /* LaunchScreen.xib */,
+				18C25A631B7360FA004D7B4B /* Supporting Files */,
+				18C25A891B7361F9004D7B4B /* TouchGrowView.h */,
+				18C25A8A1B7361F9004D7B4B /* TouchGrowView.m */,
+				18C25A8C1B736449004D7B4B /* RandomView.h */,
+				18C25A8D1B736449004D7B4B /* RandomView.m */,
+				18C25A8F1B73647D004D7B4B /* RunningManView.h */,
+				18C25A901B73647D004D7B4B /* RunningManView.m */,
+			);
+			path = TouchGrowGame;
+			sourceTree = "<group>";
+		};
+		18C25A631B7360FA004D7B4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18C25A641B7360FA004D7B4B /* Info.plist */,
+				18C25A651B7360FA004D7B4B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18C25A7C1B7360FA004D7B4B /* TouchGrowGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				18C25A7F1B7360FA004D7B4B /* TouchGrowGameTests.m */,
+				18C25A7D1B7360FA004D7B4B /* Supporting Files */,
+			);
+			path = TouchGrowGameTests;
+			sourceTree = "<group>";
+		};
+		18C25A7D1B7360FA004D7B4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18C25A7E1B7360FA004D7B4B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18C25A5F1B7360FA004D7B4B /* TouchGrowGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18C25A831B7360FA004D7B4B /* Build configuration list for PBXNativeTarget "TouchGrowGame" */;
+			buildPhases = (
+				18C25A5C1B7360FA004D7B4B /* Sources */,
+				18C25A5D1B7360FA004D7B4B /* Frameworks */,
+				18C25A5E1B7360FA004D7B4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TouchGrowGame;
+			productName = TouchGrowGame;
+			productReference = 18C25A601B7360FA004D7B4B /* TouchGrowGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18C25A781B7360FA004D7B4B /* TouchGrowGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18C25A861B7360FA004D7B4B /* Build configuration list for PBXNativeTarget "TouchGrowGameTests" */;
+			buildPhases = (
+				18C25A751B7360FA004D7B4B /* Sources */,
+				18C25A761B7360FA004D7B4B /* Frameworks */,
+				18C25A771B7360FA004D7B4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18C25A7B1B7360FA004D7B4B /* PBXTargetDependency */,
+			);
+			name = TouchGrowGameTests;
+			productName = TouchGrowGameTests;
+			productReference = 18C25A791B7360FA004D7B4B /* TouchGrowGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18C25A581B7360FA004D7B4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = UcfPay;
+				TargetAttributes = {
+					18C25A5F1B7360FA004D7B4B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					18C25A781B7360FA004D7B4B = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 18C25A5F1B7360FA004D7B4B;
+					};
+				};
+			};
+			buildConfigurationList = 18C25A5B1B7360FA004D7B4B /* Build configuration list for PBXProject "TouchGrowGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18C25A571B7360FA004D7B4B;
+			productRefGroup = 18C25A611B7360FA004D7B4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18C25A5F1B7360FA004D7B4B /* TouchGrowGame */,
+				18C25A781B7360FA004D7B4B /* TouchGrowGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18C25A5E1B7360FA004D7B4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C25A6F1B7360FA004D7B4B /* Main.storyboard in Resources */,
+				18C25A741B7360FA004D7B4B /* LaunchScreen.xib in Resources */,
+				18C25A711B7360FA004D7B4B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18C25A771B7360FA004D7B4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18C25A5C1B7360FA004D7B4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C25A6C1B7360FA004D7B4B /* ViewController.m in Sources */,
+				18C25A691B7360FA004D7B4B /* AppDelegate.m in Sources */,
+				18C25A661B7360FA004D7B4B /* main.m in Sources */,
+				18C25A911B73647D004D7B4B /* RunningManView.m in Sources */,
+				18C25A8E1B736449004D7B4B /* RandomView.m in Sources */,
+				18C25A8B1B7361F9004D7B4B /* TouchGrowView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18C25A751B7360FA004D7B4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C25A801B7360FA004D7B4B /* TouchGrowGameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18C25A7B1B7360FA004D7B4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18C25A5F1B7360FA004D7B4B /* TouchGrowGame */;
+			targetProxy = 18C25A7A1B7360FA004D7B4B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18C25A6D1B7360FA004D7B4B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C25A6E1B7360FA004D7B4B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18C25A721B7360FA004D7B4B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C25A731B7360FA004D7B4B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18C25A811B7360FA004D7B4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18C25A821B7360FA004D7B4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18C25A841B7360FA004D7B4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TouchGrowGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18C25A851B7360FA004D7B4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TouchGrowGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18C25A871B7360FA004D7B4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TouchGrowGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchGrowGame.app/TouchGrowGame";
+			};
+			name = Debug;
+		};
+		18C25A881B7360FA004D7B4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TouchGrowGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TouchGrowGame.app/TouchGrowGame";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18C25A5B1B7360FA004D7B4B /* Build configuration list for PBXProject "TouchGrowGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C25A811B7360FA004D7B4B /* Debug */,
+				18C25A821B7360FA004D7B4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18C25A831B7360FA004D7B4B /* Build configuration list for PBXNativeTarget "TouchGrowGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C25A841B7360FA004D7B4B /* Debug */,
+				18C25A851B7360FA004D7B4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18C25A861B7360FA004D7B4B /* Build configuration list for PBXNativeTarget "TouchGrowGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C25A871B7360FA004D7B4B /* Debug */,
+				18C25A881B7360FA004D7B4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18C25A581B7360FA004D7B4B /* Project object */;
+}
