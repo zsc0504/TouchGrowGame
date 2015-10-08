@@ -16,26 +16,31 @@
 /*只需定义RunningMan的Frame即可，其他的会自适应*/
 
 #define kMainScreenHeight           [[UIScreen mainScreen] bounds].size.height
-
+#define KMainScreenWidth            [[UIScreen mainScreen] bounds].size.width
 
 #define kRunningManViewHeight       20.0
 #define kRunningManViewWidth        10.0
 #define kRunningManViewInitialX     80.0
 #define kRunningManViewInitialY     (kMainScreenHeight*2/3)
 
-#define kTouchGrowViewX     (kRunningManViewInitialX + kRunningManViewWidth)
-#define kTouchGrowViewY     (kRunningManViewInitialY + kRunningManViewHeight)
+#define kTouchGrowViewX             (kRunningManViewInitialX + kRunningManViewWidth)
+#define kTouchGrowViewY             (kRunningManViewInitialY + kRunningManViewHeight)
 
 #define kBottomViewY                kTouchGrowViewY
 #define kBottomViewHeight           (kMainScreenHeight - kBottomViewY)
 
 
-@interface ViewController ()
+@interface ViewController ()<UIAlertViewDelegate>
 {
     NSTimer *growTimer;
     TouchGrowView *tgView;
     UIView *firstBottomView;
     RunningManView *runningMan;
+    RandomView *randomBottomView;
+    UIView *foreView;
+    UIView *nextView;
+    NSInteger count;
+    UILabel *countL;
 }
 @end
 
@@ -52,9 +57,21 @@
 
 - (void)initSubViews
 {
+    [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview) withObject:nil];
+    count = 0;
+    countL = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, KMainScreenWidth, 30)];
+    countL.textColor = [UIColor whiteColor];
+    countL.layer.cornerRadius = 5.0f;
+    countL.layer.masksToBounds = YES;
+    countL.textAlignment = NSTextAlignmentCenter;
+    countL.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+    [self.view addSubview:countL];
+    countL.text = [NSString stringWithFormat:@"%ld",count];
     [self initRunningManView];
     [self initFirstBottomView];
     [self initTouchView];
+    foreView = firstBottomView;
+    nextView = randomBottomView;
 }
 
 - (void)initRunningManView
@@ -69,6 +86,10 @@
     firstBottomView = [[UIView alloc]initWithFrame:CGRectMake(0, kBottomViewY, kRunningManViewInitialX + kRunningManViewWidth,  kBottomViewHeight)];
     firstBottomView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:firstBottomView];
+    
+    randomBottomView = [[RandomView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(firstBottomView.frame)+100, kBottomViewY, 70, kBottomViewHeight)];
+    randomBottomView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:randomBottomView];
 }
 
 
@@ -105,12 +126,73 @@
 /*
  *  离开屏幕后关闭自增长，调用旋转
  */
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [growTimer invalidate];
     [tgView endGrowAfter:^(float length) {
-        [runningMan run:length];
+        BOOL isDrop = NO;
+        if (length >= CGRectGetMinX(nextView.frame) - CGRectGetMaxX(foreView.frame) && length <= CGRectGetMaxX(nextView.frame) - CGRectGetMaxX(foreView.frame))
+        {
+            length = CGRectGetMaxX(nextView.frame) - CGRectGetMaxX(foreView.frame);
+            count++;
+            countL.text = [NSString stringWithFormat:@"%ld",count];
+        }else{
+            isDrop = YES;
+        }
+        [runningMan run:length after:^{
+            if (isDrop)
+            {
+                [tgView dropAfter:^(float length) {
+                }];
+                [runningMan dropAfter:^{
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"失败啦" message:@"再接再厉，重新再来吧！" delegate:self cancelButtonTitle:@"再玩一次" otherButtonTitles:nil, nil];
+                    [alert show];
+                }];
+            }else{
+                CGRect foreRect = foreView.frame;
+                CGRect nextRect = nextView.frame;
+                CGRect runManRect = runningMan.frame;
+                CGRect touchGrowRect = tgView.frame;
+
+                CGFloat distance = runManRect.origin.x - kRunningManViewInitialX;
+                
+                RandomView *randomView = [[RandomView alloc] initWithFrame:CGRectMake(arc4random()%(int)(KMainScreenWidth - kRunningManViewInitialX - kRunningManViewWidth- 80)+kRunningManViewInitialX+kRunningManViewWidth+30, foreView.frame.origin.y, 10, foreView.frame.size.height)];
+                randomView.backgroundColor = [UIColor blackColor];
+                CGRect randomRect = randomView.frame;
+                CGFloat tempX = randomRect.origin.x;
+                randomRect.origin.x = KMainScreenWidth;
+                randomView.frame = randomRect;
+                [self.view addSubview:randomView];
+                
+                foreRect.origin.x -= distance;
+                nextRect.origin.x -= distance;
+                runManRect.origin.x -= distance;
+                touchGrowRect.origin.x -= distance;
+                touchGrowRect.origin.y -= 5;
+                randomRect.origin.x = tempX;
+                [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                    foreView.frame = foreRect;
+                    nextView.frame = nextRect;
+                    runningMan.frame = runManRect;
+                    tgView.frame = touchGrowRect;
+                    randomView.frame = randomRect;
+                } completion:^(BOOL finished) {
+                    [foreView removeFromSuperview];
+                    foreView = nextView;
+                    nextView = randomView;
+                }];
+            }
+        }];
     }];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        [self initSubViews];
+    }
 }
 
 

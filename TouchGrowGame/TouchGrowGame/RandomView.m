@@ -18,4 +18,16 @@
 }
 */
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self)
+    {
+        CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+        frame.size.width = arc4random()%(int)(screenWidth-frame.origin.x-50)+30;
+        self.frame = frame;
+    }
+    return self;
+}
+
 @end

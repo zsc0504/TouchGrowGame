@@ -32,6 +32,6 @@
 /**
  *  长度没达到时掉落
  */
-- (void)drop;
+- (void)dropAfter:(void (^)(float))endGrowHandler;
 
 @end

@@ -14,7 +14,7 @@
 /**
  *  Running Man 跑，跑步的距离经过计算之后的，如果是长度不够的，就传TouchView的长度，如果是够了的，就传RandomView的X值
  */
-- (void)run:(float)distance;
+- (void)run:(float)distance after:(dispatch_block_t)result;
 
 
 /**

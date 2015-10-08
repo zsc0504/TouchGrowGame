@@ -85,8 +85,6 @@ typedef NS_ENUM(NSUInteger, TouchGrowViewRotationType)
     [UIView animateWithDuration:0.4 animations:^{
         self.transform = CGAffineTransformRotate(self.transform, angle);
     } completion:^(BOOL finished) {
-        
-        // 旋转完之后，height 和 width 对调
         endGrowHandler(self.frame.size.width);
     }];
 }
