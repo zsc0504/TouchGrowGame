@@ -65,8 +65,17 @@
     countL.layer.masksToBounds = YES;
     countL.textAlignment = NSTextAlignmentCenter;
     countL.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-    [self.view addSubview:countL];
     countL.text = [NSString stringWithFormat:@"%ld",count];
+    [self.view addSubview:countL];
+    
+    UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, KMainScreenWidth, 80)];
+    l.backgroundColor = [UIColor clearColor];
+    l.textColor = [UIColor blackColor];
+    l.numberOfLines = 0;
+    l.textAlignment = NSTextAlignmentCenter;
+    l.text = @"将手放在屏幕，使杆变长";
+    [self.view addSubview:l];
+    
     [self initRunningManView];
     [self initFirstBottomView];
     [self initTouchView];

@@ -59,12 +59,19 @@ typedef NS_ENUM(NSUInteger, TouchGrowViewRotationType)
     }
     return self;
 }
+static int isGrowUP = 1;
 
 - (void)growHeight
 {
     CGRect myRect = self.frame;
-    myRect.size.height += _rate;
-    myRect.origin.y -= _rate;
+    if (myRect.origin.y <= 40)
+    {
+        isGrowUP = -1;
+    }else if (myRect.size.height <= 0){
+        isGrowUP = 1;
+    }
+    myRect.size.height += _rate*isGrowUP;
+    myRect.origin.y -= _rate*isGrowUP;
     self.frame = myRect;
 }
 
