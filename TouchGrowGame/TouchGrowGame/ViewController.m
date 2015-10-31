@@ -165,8 +165,7 @@
                 CGRect touchGrowRect = tgView.frame;
 
                 CGFloat distance = runManRect.origin.x - kRunningManViewInitialX;
-                
-                RandomView *randomView = [[RandomView alloc] initWithFrame:CGRectMake(arc4random()%(int)(KMainScreenWidth - kRunningManViewInitialX - kRunningManViewWidth- 80)+kRunningManViewInitialX+kRunningManViewWidth+30, foreView.frame.origin.y, 10, foreView.frame.size.height)];
+                RandomView *randomView = [[RandomView alloc] initWithFrame:CGRectMake(arc4random_uniform((int)(KMainScreenWidth - kRunningManViewInitialX - kRunningManViewWidth- 80))+kRunningManViewInitialX+kRunningManViewWidth+30, foreView.frame.origin.y, 10, foreView.frame.size.height)];
                 randomView.backgroundColor = [UIColor blackColor];
                 CGRect randomRect = randomView.frame;
                 CGFloat tempX = randomRect.origin.x;
